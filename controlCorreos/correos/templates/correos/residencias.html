@@ -1,0 +1,13 @@
+{%  extends 'correos/base.html' %}
+
+{% block title  %}Residencias{% endblock %}
+
+{% block header %} Residencias {% endblock %}
+
+{% block content %}
+<ul>
+    {% for residencia in residencias %}
+        <li> {{ residencia.numero }} | {{residencia.dueño}} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

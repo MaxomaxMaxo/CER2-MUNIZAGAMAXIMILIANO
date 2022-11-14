@@ -1,0 +1,13 @@
+{%  extends 'correos/base.html' %}
+
+{% block title  %}Correspondencia{% endblock %}
+
+{% block header %} Correspondencia {% endblock %}
+
+{% block content %}
+<ul>
+    {% for correspondencia in correspondencias %}
+        <li> Residencia N°: {{ correspondencia.numero }} recibe entrega N°: {{correspondencia.id_correo}} en conserjeria el {{correspondencia.datepublished}} estado: {{ correspondencia.estado }} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

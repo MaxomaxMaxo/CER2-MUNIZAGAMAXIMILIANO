@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'correos/css/bootstrap.css '%}">
+</head>
+<body>
+    <div class="container">
+        <h1>{% block header  %}{% endblock %}</h1>
+
+   <ul>
+       <li><a href="{% url 'home'%}">Inicio</a></li>
+       <li><a href="{% url 'residencias'%}">Residencias</a></li>
+       <li><a href="{% url 'correspondencias'%}">Correspondencia</a></li>
+       <li><a href="{% url 'admin:index' %}">al panel de Admin</a></li>
+   </ul>
+
+   {% block content  %}
+
+
+   {% endblock %}
+</div>
+</body>
+</html>
